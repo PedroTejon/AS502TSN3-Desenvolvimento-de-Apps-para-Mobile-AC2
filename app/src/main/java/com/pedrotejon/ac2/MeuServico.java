@@ -39,7 +39,7 @@ public class MeuServico extends Service {
                         String treino = cursor.getString(1);
                         int tempo = cursor.getInt(2);
 
-                        for(int i = 0; i < tempo; i++) {
+                        for(int i = tempo; i > 0; i--) {
                             Notification updatedNotification = buildNotification("Treino: " + treino + " - Tempo: " + Integer.toString(i));
                             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                             notificationManager.notify(NOTIFICATION_ID, updatedNotification);
