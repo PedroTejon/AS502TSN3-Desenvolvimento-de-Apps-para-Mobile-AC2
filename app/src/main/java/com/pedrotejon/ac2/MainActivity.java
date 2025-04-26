@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                             txtContador.setText(Integer.toString(tempo));
                         });
 
-                        for(int i = 0; i < tempo; i++) {
+                        for(int i = tempo; i > 0; i--) {
                             tempoAtual = i;
                             runOnUiThread(() -> txtContador.setText(Integer.toString(tempoAtual)));
                             Thread.sleep(1000);
