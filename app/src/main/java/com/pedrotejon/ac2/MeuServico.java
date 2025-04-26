@@ -31,6 +31,7 @@ public class MeuServico extends Service {
         databaseHelper = new BancoHelper(this);
 
         handler.postDelayed(() -> {
+            new Thread(() -> {
             try {
                 var cursor = databaseHelper.listarTreinos();
 
@@ -54,6 +55,7 @@ public class MeuServico extends Service {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
+            }).start();
         }, 0);
     };
 
