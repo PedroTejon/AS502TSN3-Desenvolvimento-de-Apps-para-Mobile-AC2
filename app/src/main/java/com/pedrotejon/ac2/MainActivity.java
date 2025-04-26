@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         threadTreino = new ThreadTreino();
         threadTreino.start();
 
-//        this.stopService(new Intent(this, MeuServico.class));
+        this.stopService(new Intent(this, MeuServico.class));
         this.startService(new Intent(this, MeuServico.class));
     }
 
